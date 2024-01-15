@@ -1,0 +1,22 @@
+El simbolo > significa que cualquier usuario lo puede ejecutar
+El simbolo # significa que solo se puede ejecutar como usuario
+
+> psql -l -> Listar bases de datos
+> psql -U [user] -W -> -U = User, -W = Password
+
+user=# \c [dbname] -> Conectarte a una BD
+
+> psql -U [user] -d [dbname] -> Conectarte a una db directamente
+
+dbname-# \dt -> Lista toda las tablas de la bd
+
+>  psql -U root -d dbfastsuo2022 -c "SELECT * FROM lista_menu" -> -c para realizar una query
+
+user=# create database [dbname] -> Crear bd
+
+user=# \l -> Lista las bases de datos
+
+dbname=# drop schema if exists public;
+
+> pg_dump -U <user> -Fc <database> > <filename>.backup -> Crear un backup
+> pg_restore -U <user> -d <database> <filename> -> Restaurar backup

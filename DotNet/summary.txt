@@ -1,0 +1,7 @@
+BASIC COMMANDS:
+dotnet new --list -> Lista de frameworks a usar
+dotnet new webapi -> Crear plantilla del framework webapi
+dotnet build -> Compilar el codigo
+dotnet run -> Compilar y ejecutar
+dotnet run --no-build -> Ejecutar sin compilar
+dotnet bin/Debug/net7.0/ServerBienestar.dll  --urls http://127.0.0.1:5902 -> Ejecutar en produccion en puerto especifico

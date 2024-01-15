@@ -1,0 +1,13 @@
+// Pasos para cambiar color de terminal
+// Cambiar colores de LS:
+$ dircolors -b >> .bashrc  -> crear export LS_COLORS en /~/.bashrc
+$ nano ~/.bashrc -> Editar archivo bashrc
+$ source ~/.bashrc -> Reiniciar configuracion de bashrc para aplicar cambios
+Mas informacion: https://linuxhint.com/ls_colors_bash/
+
+// Cambiar color de bash:
+$ declare -p PS1 -> Ver contenido de la variable PS1
+$ nano ~/.bashrc -> Abrir archivo .bashrc y editar la variable PS1
+  |> Valor inicial: ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ -> Color azul
+  |> Valor final:  ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ -> Color cian
+$ source ~/.bashrc -> Aplicar cambios

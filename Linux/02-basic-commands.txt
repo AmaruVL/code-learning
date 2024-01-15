@@ -1,0 +1,24 @@
+pwd -> Print working directory
+ls -> List
+ls -a -> Listar todos los directorios (incluido los ocultos)
+ls -l -> Listar directorios con sus permisos
+ls -al -> Mostrar directorios (tambien ocultos) con sus permisos
+ls -al file -> Mostrar -al de file
+
+// Moverse de directorios
+/ -> Raiz
+~ > /home/user
+cd ~ -> Ir a la directorio de usuario
+cd / -> Ir a la raiz del sistema
+cd Directorio/ -> Ruta relativa
+cd /home/user/directorio -> Ruta absoluta (comienza con /)
+
+//
+touch archivo.txt -> Permite crear archivos, tambien modificar las fechas de un archivo ya creado
+cp file file-copy -> Copiar archivo
+cp -r directorio/ directorio-copy/ -> Copiar directorio
+mv file-start file-end -> mover directorio o renombrar
+mv -v file file-end -> Mover, indicando de donde a donde se está moviendo
+
+mkdir file -> Crear directorio file
+rm -r file -> Eliminar directorio

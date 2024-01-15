@@ -1,0 +1,18 @@
+#> mysqldump -u root -p [database_name] > restoreFile.sql -> Restaurar BD
+mysql> USE [database_name] -> Cambiar de base de datos
+mysql> SHOW TABLES; -> Mostrar tablas
+
+
+
+#> mysql -h localhost -u root -p -> Iniciar sesion
+mysql> show databases; -> Ver bases de datos
+mysql> use <databaseName>; -> Ingresar a una base de datos
+mysql [database]> show tables; -> Ver tablas de una base de datos
+mysql [database]> describe <tableName>; -> Ver atributos de una tabla
+mysql [database]> create database <tableName>; -> Crear base de datos
+mysql [database]> drop database <tableName>; -> Borrar base de datos
+
+#> mysqldump -h [host] -u [user] -p [database] > [nameFile].sql -> Crear copia base de datos
+  |> mysqldump -h localhost -u root -p dbmuni_core > 202310171258-backup.sql
+
+#> mysql -h [host] -u [user] -p [database] < [nameFile].sql -> Restaurar base de datos

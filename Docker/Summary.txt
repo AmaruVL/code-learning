@@ -1,0 +1,10 @@
+CREAR DB Y ABRIR CON PGADMIN USANDO DOCKER
+docker network create pg-network ->Crear red
+docker run -d --name postgres-12 --network pg-network -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=admin postgres:12-alpine
+docker run -d --name pgadmin --network pg-network -p 80:80 -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" -e PGADMIN_DEFAULT_PASSWORD="admin" dpage/pgadmin4
+
+En pgadmin, localhost será el valor de --name de la db
+
+docker exec -it [container-name] bash -> Abrir consola del contenedor
+docker cp [path_file] [container-name:path_file] -> Copiar archivo del sistema al contenedor
+psql -h postgres-16 -p 5432 -U postgres -f dbfastsuo.backup fastsuotest

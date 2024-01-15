@@ -1,0 +1,17 @@
+// Actualización de versiones:
+// Si la version es v1.0.0, lo siguiente hara:
+> npm version patch -> v1.0.1
+> npm version minor -> v1.1.0
+> npm version major -> v2.0.0
+
+// Por defecto, hace un commit y crea un tag con la version
+> npm --no-git-tag-version version patch -> No crear tag de la version
+
+> ssh-keygen -t rsa -b 4096 -> Generar key publico
+> cat github-actions.pub >> ~/.ssh/authorized_keys  -> Añadir key autorizada
+
+// Crear ruta github del servidor
+> git remote add origin https://{username}:{token}@github.com/{owner-repo-user}/{proyect}.git -> Agregar
+> git remote set-url origin https://{username}:{token}@github.com/{owner-repo-user}/{proyect}.git -> Modificar
+
+||> git remote set-url origin https://AmaruVL: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@github.com/junuycorp/construtrackback.git

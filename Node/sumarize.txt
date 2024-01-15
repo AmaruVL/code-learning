@@ -1,0 +1,2 @@
+npm init -y -> Crear package.json
+npm i dotenv -> Paquete para configurar variables de entorno

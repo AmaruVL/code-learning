@@ -1,0 +1,59 @@
+SHORTCUTS
+Alt + ↑ / ↓ -> Move line up/down ------
+Shift + Alt + A -> Toggle block comment -------
+Alt + E -> Toggle line comment ------- Modificado (Original: Ctrl + Shift + 7)
+
+Ctrl + Click -> Ir a la definicion ------
+Ctrl + Alt + Click -> Mostrar definicion en otra pestaña --------
+Alt + F12 -> Mostrar definicion en ventana emergente
+
+Ctrl + Shift + K -> Delete line ---------
+Ctrl + Shift + L -> Select all matches ----------
+Ctrl + D -> Add Selection To Next Find Match -------
+
+Ctrl + Z -> Undo ----------
+Ctrl + Shift + Z -> Redo ---------
+
+Ctrl + B -> View: Toggle Primary Side Bar Visibility -------
+Ctrl + K Z -> View: Toggle Zen Mode ------
+
+Ctrl + Ñ -> View: Toggle Terminal ----------- Agregado
+
+Emmet: Wrap with abbreviation (envolver codigo con etiquetas)
+
+Similar a google
+Ctrl + W            View: Close Editor --------
+Ctrl + K  Ctrl + W  View: Close All Editors --------
+Ctrl + Shift + T    View: Reopen Closed Editor ------
+Ctrl + TAB          View: Quick Open Previous Recently Used Editor in Group -------
+
+Ctrl + Shift +  ↑ / ↓ -> Copy Line Up/Down -------- Modificado (Original: Alt + Shift +  ↑ / ↓ )
+
+Alt + Shift + ↑ / ↓ -> Crear multicursores -------- Modificado (Original: Ctrl + Shift + ↑ / ↓ )
+Alt + Shift + DragMouse -> Crear Multicursores mientras se desliza el mouse ----------
+
+Alt + ← / → -> Mover a la anterior/posterior posición del cursor
+Ctrl + Shift + ← / → -> Seleccionar palabra delante/atras del cursor (ID: cursorWordEndRightSelect / cursorWordLeftSelect) --------
+
+
+Alt + 2 click -> Seleccionar palabra y continuar selecionando -------
+
+Ctrl + P => Buscar archivos -------
+Ctrl + P => luego escribir > -> Buscar comandos de vscode (Ctrl + Shift + P) ------
+Ctrl + P => luego escribir @ -> Buscar definiciones (Ctrl + shift + O) -------
+Ctrl + P => luego escribir : -> Buscar lineas  (Ctrl + G) -------
+
+Seleccionar var y F2 -> Reemplazar y renombrar --------
+
+--Hotkeys to insert lines
+Ctrl + Enter -> Insert Line Below ---------
+Ctrl + Shift + Enter -> Insert Line Above ------
+
+
+Shortcuts personalizados:
+"alt+s" -> Select to bracket --------
+"alt+d" -> Transform to camel case ------
+"shift+alt+l" -> Transform to lower case ------
+"shift+alt+u" -> Transform to upper case ------
+"alt+f" -> Transform to snake case ------
+"ctrl+alt+s" -> Save without formatting  --------

@@ -1,0 +1,15 @@
+#> /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong@Passw0rd>" -> Conectarse
+1> create database <Nombre>;
+1> select Name from Sys.databases; -> Mostrar todas las bases de datos
+2> GO -> Siempre colocar go al final de cada consulta
+
+// RESTAURAR ARCHIVO .bak
+RESTORE FILELISTONLY FROM DISK = N'/var/opt/mssql/data/DBbienestar.bak'  -> Listar bases de datos que contiene el archivo
+--
+RESTORE DATABASE DBbienestar FROM DISK = N'/var/opt/mssql/data/DBbienestar.bak'
+WITH MOVE 'DBbienestar' TO '/var/opt/mssql/data/DBbienestar.mdf', 
+MOVE 'DBbienestar_log' TO '/var/opt/mssql/data/DBbienestar_log.ldf'  -> Restaurar base de datos
+
+// GENERAR BACKUP DE BASE DE DATOS
+BACKUP DATABASE DBbienestar
+TO DISK = N'/var/opt/mssql/data/backup.bak'; -> Generar backup

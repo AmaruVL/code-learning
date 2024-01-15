@@ -1,0 +1,25 @@
+DECLARE @procedure_name NVARCHAR(128);
+DECLARE @schema_name NVARCHAR(128);
+DECLARE @sql NVARCHAR(MAX);
+
+DECLARE procedures_cursor CURSOR FOR
+SELECT 
+    schema_name(schema_id) AS schema_name,
+    name AS procedure_name
+FROM 
+    sys.procedures;
+
+OPEN procedures_cursor;
+
+FETCH NEXT FROM procedures_cursor INTO @schema_name, @procedure_name;
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    SET @sql = 'GRANT EXECUTE ON OBJECT::' + QUOTENAME(@schema_name) + '.' + QUOTENAME(@procedure_name) + ' TO [user_name];';
+    EXEC sp_executesql @sql;
+
+    FETCH NEXT FROM procedures_cursor INTO @schema_name, @procedure_name;
+END
+
+CLOSE procedures_cursor;
+DEALLOCATE procedures_cursor;

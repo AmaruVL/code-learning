@@ -1,0 +1,2 @@
+browse . -> Abrir file manager en la ruta actual (Tambien: xdg-open [file])
+sudo ss -tulpn -> Ver puertos usados

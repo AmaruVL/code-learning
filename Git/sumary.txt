@@ -1,0 +1,67 @@
+SECCION 2
+git help -> Ayuda
+git help [command] -> Ayuda de un comando |> git help commit
+
+git config --global user.name "Nombre"
+git config --global user.email "Email"
+git config --global -e -> Listar todas las config
+git config --global init.defaultBranch main -> Indicar que la rama inicial por defecto se llamará main
+git config --global core.autocrlf true -> Convertir a CRLF automaticamente
+
+ALIAS: Crear atajos de comandos
+git config --global alias.[nombreAlias] "[comando sin git]" -> 
+  |> git config --global alias.s "status --short"
+  |> git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(yellow)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+VIM: Editor de git
+a -> Editar texto
+:wq! -> Guardar y salir
+:q! -> Salir de VIM
+
+git init -> Iniciar un repositorio
+git status -> Información sobre commits, branchs, untracked files (archivos sin seguimiento, o tuvieron modificacion o es recien creado)
+git status --short -> Información corta del git status
+git add [file|comodin] -> Empezar a dar seguimiento al archivo
+  comodines: 
+    . -> Todos los archivos
+    *.html -> Todos que terminen en .html
+    js/*.js -> Todos los archivos de la carpeta js que terminen en .js
+    css/ -> Todo el contenido de la carpeta css
+    
+git reset [file|.] -> Dejar de dar seguimiento al archivo
+git commit -m "mensaje" -> Realizar commit y indicar mensaje (-m)
+git commit -am "mensaje" -> Realizar commit con "git add .". Solo hace commit a archivos que tengan seguimiento (tracked). Si un archivo esta untracked, no lo añadira al commit.
+
+git checkout -- . -> Establecer repositorio en el ultimo commit
+
+git branch -> Indica las ramas del repositorio
+git branch -m master main -> Renombrar rama master a main
+
+git log -> Ver los logs del repositorio (linea del tiempo)
+git log --oneline -> Ver logs en resumen
+
+Archivo ".gitKeep" -> Las carpetas vacias git no los toma en cuenta, si queremos que lo haga, se coloca el archivo ".gitKeep"
+
+SECCION 3
+git diff -> Ver diferencias entre la version actual y la anterior
+git diff --staged -> Comparar con los cambios del staged area
+
+git commit --amend -m "mensaje" -> Renombrar commit anterior
+git reset --soft [HEAD|hash_commit]^[|1|2|3|...] -> Regresar a un commit
+ |> git reset --soft HEAD^ -> Regresar al commit anterior
+ |> git reset --soft HEAD^2 -> Regresar a 2 commits antes del HEAD
+ |> git reset --soft e6f17cd -> Regresar al commit que tenga el hash e6f17cd
+Flags en git reset: 
+  --soft -> Retorna a un punto sin eliminar ningun cambio
+  --mixed -> Retorna en un punto sin eliminar ningun cambio y sin el git add (valor por defecto al no especificar el flag)
+  --hard -> Retorna a un punto eliminando los cambios de los commits
+
+git reflog -> Muestra los logs que se hicieron en el repositorio
+
+git mv [nombre1] [nombre2] -> Truco para renombrar archivo. MV es un comando para mover archivos.
+git rm [nombre_archivo] -> Eliminar un archivo
+
+Archivo ".gitignore" -> Ignora los directorios o archivos que no queremos darles seguimiento. La forma de indicar es igual que los comodines.
+
+SECCION 4
+

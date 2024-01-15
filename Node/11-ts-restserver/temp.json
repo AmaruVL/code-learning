@@ -1,0 +1,40 @@
+{
+  "editor.fontSize": 16,
+  "editor.guides.bracketPairs": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.mouseWheelZoom": true,
+  "editor.linkedEditing": true,
+  "editor.tokenColorCustomizations": {
+    "comments": "#818a99"
+  },
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "expand",
+  "workbench.sideBar.location": "right",
+  "workbench.list.smoothScrolling": true,
+  "workbench.colorTheme": "One Dark Pro Monokai Darker",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {
+    "editorError.background": "#ff000033",
+    "editorError.foreground": "#ff8585",
+    "editorWarning.foreground": "#f8fa89",
+    "quickInputList.focusBackground": "#fff3",
+    "list.hoverBackground": "#fff3",
+    "list.activeSelectionBackground": "#fff2",
+    "tab.activeBorderTop": "#f8fa89",
+    "scrollbarSlider.background": "#ffffff41",
+    "minimapSlider.background": "#ffffff41",
+    "minimapSlider.hoverBackground": "#ffffff51",
+    "minimapSlider.activeBackground": "#f8fa8955"
+  },
+  "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.explorerKind": "external",
+  "emmet.syntaxProfiles": {
+    "html": {
+      "inline_break": true
+    }
+  }
+}

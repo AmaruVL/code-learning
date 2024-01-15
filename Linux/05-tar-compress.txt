@@ -1,0 +1,5 @@
+// Compress a folder o directory
+tar -zcvf path_result.tar.gz folder_name
+
+
+|> tar --exclude='node_modules' -zcvf ../timermdk-backup.tar.gz .

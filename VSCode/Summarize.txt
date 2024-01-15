@@ -1,0 +1,50 @@
+SHORTCUTS
+Alt + ↑ / ↓ -> Mover lineas
+Shift + Alt + A -> Comentar por bloque
+Ctrl + } -> Comentar por linea
+
+Ctrl + Click -> Ir a la definicion
+Ctrl + Alt + Click -> Mostrar definicion en otra pestaña
+Alt + F12 -> Mostrar definicion en ventana emergente
+
+Ctrl + Shift + K -> Borrar lineas de codigo
+Ctrl + Shift + L -> Seleccionar todas las ocurrencias
+Ctrl + D -> Seleccionar ocurrencias de a poco
+
+Ctrl + Z -> Deshacer
+Ctrl + Shift + Z -> Rehacer
+
+Ctrl + B -> Mostrar/ocultar menu lateral izquierdo
+Ctrl + K Z -> Entrar en modo Zen mode (cero distracciones)
+
+Ctrl + Ñ -> Mostrar/Ocultar terminal
+
+Emmet: Wrap with abbreviation (envolver codigo con etiquetas)
+
+Similar a google
+Ctrl + W            Cerrar tab
+Ctrl + K  Ctrl + W  Cerrar todas
+Ctrl + Shift + T    Reabrir anterior
+Ctrl + TAB          Cambiar de tab
+
+Alt + Shift +  ↑ / ↓ -> Clonar linea/seleccion
+
+Ctrl + Alt+ ↑ / ↓ -> Crear multicursores
+
+Alt + ← / → -> Mover a la anterior/posterior posición del cursor
+Ctrl + Shift + ← / →  -> Seleccionar palabra delante/atras del cursor
+
+
+Alt + 2 click -> Seleccionar palabra y continuar selecionando
+
+Ctrl + P => luego escribir > -> Buscar comandos/archivos
+Ctrl + P => luego escribir @ -> Buscar definiciones
+Ctrl + P => luego escribir : -> Buscar lineas  (Ctrl + G)
+
+Seleccionar var y F2 -> Reemplazar y renombrar
+
+Ctrl + shift + o => Search functions in a file
+
+--Hotkeys to insert lines
+Ctrl + Enter -> Insertar linea abajo
+Ctrl + Shift + Enter -> Insertar linea arriba

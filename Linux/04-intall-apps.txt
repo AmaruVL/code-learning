@@ -1,0 +1,2 @@
+dpkg -i <nombre_paquete.deb> -> Instalar archivo con extension .deb
+sudo apt -f install -> Instalar dependencias en caso de error por falta de librerías

@@ -1,0 +1,761 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen Product find should display data product 1`] = `
+<RCTSafeAreaView
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "marginHorizontal": 39,
+          "marginTop": 47,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "marginBottom": 39,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#020202",
+              "fontFamily": "Avenir",
+              "fontSize": 39,
+              "fontWeight": "800",
+              "lineHeight": 53,
+            },
+          ]
+        }
+      >
+        home.header.title
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#020202",
+              "fontFamily": "Avenir",
+              "fontSize": 31,
+              "lineHeight": 39,
+            },
+          ]
+        }
+        testID="name-user"
+      >
+        Josue Farfan
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#9B9898",
+              "fontFamily": "Avenir",
+              "fontSize": 27,
+              "fontWeight": "900",
+              "lineHeight": 37,
+            },
+          ]
+        }
+      >
+        home.yourPoints
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#334FFA",
+              "borderRadius": 39,
+              "marginVertical": 39,
+              "padding": 39,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "Avenir",
+                "fontSize": 31,
+                "fontWeight": "800",
+                "lineHeight": 39,
+              },
+            ]
+          }
+        >
+          months.december
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "Avenir",
+                "fontSize": 63,
+                "fontWeight": "900",
+                "lineHeight": 86,
+                "marginBottom": 47,
+                "marginTop": 20,
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          50.00 pts
+        </Text>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#9B9898",
+              "fontFamily": "Avenir",
+              "fontSize": 27,
+              "fontWeight": "900",
+              "lineHeight": 37,
+            },
+          ]
+        }
+      >
+        home.yourMovements
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 20,
+            "flex": 1.2,
+            "marginVertical": 31,
+            "paddingHorizontal": 20,
+            "paddingVertical": 20,
+          },
+        ]
+      }
+    >
+      <RCTScrollView
+        data={
+          Array [
+            Object {
+              "createdAt": "2022-12-09T10:20:00.909Z",
+              "id": "3",
+              "image": "https://loremflickr.com/640/480/technics",
+              "is_redemption": false,
+              "points": 200,
+              "product": "Fantastic Granite Bacon",
+            },
+            Object {
+              "createdAt": "2022-12-10T10:20:00.909Z",
+              "id": "4",
+              "image": "https://loremflickr.com/640/480/technics",
+              "is_redemption": true,
+              "points": 100,
+              "product": "My product 2",
+            },
+            Object {
+              "createdAt": "2022-12-20T10:20:00.909Z",
+              "id": "5",
+              "image": "https://loremflickr.com/640/480/technics",
+              "is_redemption": true,
+              "points": 50,
+              "product": "Mu pRiaaj 20",
+            },
+          ]
+        }
+        getItem={[Function]}
+        getItemCount={[Function]}
+        keyExtractor={[Function]}
+        onContentSizeChange={[Function]}
+        onLayout={[Function]}
+        onMomentumScrollBegin={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        stickyHeaderIndices={Array []}
+        viewabilityConfigCallbackPairs={Array []}
+      >
+        <View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "marginBottom": 20,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "#9B9898",
+                        "borderRadius": 20,
+                        "marginRight": 20,
+                      },
+                    ]
+                  }
+                >
+                  <Image
+                    resizeMethod="auto"
+                    resizeMode="cover"
+                    source={
+                      Object {
+                        "uri": "https://loremflickr.com/640/480/technics",
+                      }
+                    }
+                    style={
+                      Object {
+                        "borderRadius": 20,
+                        "height": 108,
+                        "width": 108,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flex": 1,
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#0B0B0B",
+                          "fontFamily": "Avenir",
+                          "fontSize": 27,
+                          "fontWeight": "800",
+                          "lineHeight": 37,
+                        },
+                      ]
+                    }
+                    testID="item-name"
+                  >
+                    Fantastic Granite Bacon
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#0B0B0B",
+                          "fontFamily": "Avenir",
+                          "fontSize": 24,
+                          "fontWeight": "400",
+                          "lineHeight": 31,
+                        },
+                      ]
+                    }
+                    testID="item-date"
+                  >
+                    9 de diciembre, 2022
+                  </Text>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#0B0B0B",
+                        "fontFamily": "Avenir",
+                        "fontSize": 27,
+                        "fontWeight": "800",
+                        "lineHeight": 37,
+                      },
+                    ]
+                  }
+                  testID="item-points"
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#0ECD9D",
+                          "fontFamily": "Avenir",
+                          "fontSize": 31,
+                          "fontWeight": "800",
+                          "lineHeight": 39,
+                        },
+                      ]
+                    }
+                  >
+                    + 
+                  </Text>
+                  200
+                </Text>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#020202",
+                        "fontFamily": "Avenir",
+                        "fontSize": 31,
+                        "fontWeight": "800",
+                        "lineHeight": 39,
+                        "marginLeft": 20,
+                      },
+                    ]
+                  }
+                >
+                  &gt;
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "marginBottom": 20,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "#9B9898",
+                        "borderRadius": 20,
+                        "marginRight": 20,
+                      },
+                    ]
+                  }
+                >
+                  <Image
+                    resizeMethod="auto"
+                    resizeMode="cover"
+                    source={
+                      Object {
+                        "uri": "https://loremflickr.com/640/480/technics",
+                      }
+                    }
+                    style={
+                      Object {
+                        "borderRadius": 20,
+                        "height": 108,
+                        "width": 108,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flex": 1,
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#0B0B0B",
+                          "fontFamily": "Avenir",
+                          "fontSize": 27,
+                          "fontWeight": "800",
+                          "lineHeight": 37,
+                        },
+                      ]
+                    }
+                    testID="item-name"
+                  >
+                    My product 2
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#0B0B0B",
+                          "fontFamily": "Avenir",
+                          "fontSize": 24,
+                          "fontWeight": "400",
+                          "lineHeight": 31,
+                        },
+                      ]
+                    }
+                    testID="item-date"
+                  >
+                    10 de diciembre, 2022
+                  </Text>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#0B0B0B",
+                        "fontFamily": "Avenir",
+                        "fontSize": 27,
+                        "fontWeight": "800",
+                        "lineHeight": 37,
+                      },
+                    ]
+                  }
+                  testID="item-points"
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FF0000",
+                          "fontFamily": "Avenir",
+                          "fontSize": 31,
+                          "fontWeight": "800",
+                          "lineHeight": 39,
+                        },
+                      ]
+                    }
+                  >
+                    - 
+                  </Text>
+                  100
+                </Text>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#020202",
+                        "fontFamily": "Avenir",
+                        "fontSize": 31,
+                        "fontWeight": "800",
+                        "lineHeight": 39,
+                        "marginLeft": 20,
+                      },
+                    ]
+                  }
+                >
+                  &gt;
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "marginBottom": 20,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "#9B9898",
+                        "borderRadius": 20,
+                        "marginRight": 20,
+                      },
+                    ]
+                  }
+                >
+                  <Image
+                    resizeMethod="auto"
+                    resizeMode="cover"
+                    source={
+                      Object {
+                        "uri": "https://loremflickr.com/640/480/technics",
+                      }
+                    }
+                    style={
+                      Object {
+                        "borderRadius": 20,
+                        "height": 108,
+                        "width": 108,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flex": 1,
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#0B0B0B",
+                          "fontFamily": "Avenir",
+                          "fontSize": 27,
+                          "fontWeight": "800",
+                          "lineHeight": 37,
+                        },
+                      ]
+                    }
+                    testID="item-name"
+                  >
+                    Mu pRiaaj 20
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#0B0B0B",
+                          "fontFamily": "Avenir",
+                          "fontSize": 24,
+                          "fontWeight": "400",
+                          "lineHeight": 31,
+                        },
+                      ]
+                    }
+                    testID="item-date"
+                  >
+                    20 de diciembre, 2022
+                  </Text>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#0B0B0B",
+                        "fontFamily": "Avenir",
+                        "fontSize": 27,
+                        "fontWeight": "800",
+                        "lineHeight": 37,
+                      },
+                    ]
+                  }
+                  testID="item-points"
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#FF0000",
+                          "fontFamily": "Avenir",
+                          "fontSize": 31,
+                          "fontWeight": "800",
+                          "lineHeight": 39,
+                        },
+                      ]
+                    }
+                  >
+                    - 
+                  </Text>
+                  50
+                </Text>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#020202",
+                        "fontFamily": "Avenir",
+                        "fontSize": 31,
+                        "fontWeight": "800",
+                        "lineHeight": 39,
+                        "marginLeft": 20,
+                      },
+                    ]
+                  }
+                >
+                  &gt;
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignContent": "space-between",
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#334FFA",
+            "borderRadius": 20,
+            "flex": 1,
+            "height": 98,
+            "justifyContent": "center",
+            "marginRight": 20,
+            "opacity": 1,
+          }
+        }
+        testID="btn-earned"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "Avenir",
+                "fontSize": 31,
+                "fontWeight": "900",
+                "lineHeight": 39,
+              },
+            ]
+          }
+        >
+          home.btnEarned
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#334FFA",
+            "borderRadius": 20,
+            "flex": 1,
+            "height": 98,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID="btn-redemption"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "Avenir",
+                "fontSize": 31,
+                "fontWeight": "900",
+                "lineHeight": 39,
+              },
+            ]
+          }
+        >
+          home.btnRedemption
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

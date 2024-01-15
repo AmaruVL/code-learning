@@ -1,0 +1,25 @@
+PM2 -> Gestor de despligues
+SERVE -> Crear servidor
+
+COMANDOS PM2
+pm2 start [file.js] -n [name] -> Crear un nuevo proceso
+pm2 stop [name|id] -> Detener proceso
+pm2 delete [name|id] -> Eliminar proceso
+pm2 delete all -> Eliminar todos los procesos
+pm2 log [name|id] -> Ver logs del proceso
+pm2 log -> Ver los logs de todos los procesos
+pm2 env [name|id] -> Ver las variables de entorno
+
+COMANDOS SERVE
+serve -s [build_folder_path] [port] -> Iniciar servidor en puerto especificado (si no se especifica, por defecto es 3000)
+
+
+PM2 + SERVE
+pm2 serve [build_folder_path] [port] --spa --name [name_process]
+
+DEPLOY EXAMPLES
+Importante deplegar con --spa, sino habrá errores
+|> pm2 start app.js -> Deploy backend project
+|> pm2 serve build --spa -> Deploy frontend project (build es la carpeta del despliegue)
+|> pm2 serve build 5173 --spa -> Desplegar en el puerto 5173
+|> pm2 serve dist 5005 --spa --name castanales-front-5005 -> Importante colocar --name en ves de -n

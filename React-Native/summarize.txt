@@ -1,0 +1,14 @@
+npm install -g expo-cli -> Instalar expo
+expo init [name] -> Crear plantilla
+npm run [android, ios, web] -> Iniciar en un dispositivo en especifico
+npm start -> iniciar en forma general (bundler)
+
+npm i react-router-native -> Instalar para rutas
+
+-----------
+
+npx create-react-app reforzamiento --template typescript -> Crear app (normal) en typescript
+npx react-native init name --template react-native-template-typescript -> Crear proyecto en typescript (react-native)
+npx react-native run-android -> Ejecutar proyecto en android
+
+yarn add @react-navigation/native -> Librería para navegaciones

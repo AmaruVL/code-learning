@@ -1,0 +1,1 @@
+irb -> Para ingresar a "consola" de ruby

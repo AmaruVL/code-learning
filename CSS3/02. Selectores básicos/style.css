@@ -1,0 +1,41 @@
+/* Primer reto */
+h2{
+    color: steelblue;
+}
+
+.alex{
+    border: 1px solid black;
+}
+
+#section{
+    border: 1px solid blue;
+}
+
+.titulo{
+    text-align: center;
+}
+
+p{
+    color: darkblue;
+}
+
+/* Segundo reto */
+[href] {
+    text-decoration: none;
+}
+
+[href="https://alexcgdesign.com/inicio"]{
+    color: red;
+}
+
+[href ^= "hsttps"]{
+    color: darkolivegreen;
+}
+
+[href $= "org"]{
+    background: steelblue;
+}
+
+[href *= "alex"]{
+    background: darksalmon;
+}

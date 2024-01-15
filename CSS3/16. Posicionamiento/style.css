@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+.container{
+    width: 450px;
+    height: 530px;
+    margin: 20px auto;
+    border: 5px solid crimson;
+    position: relative;
+}
+
+.box{
+    background: steelblue;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    line-height: 100px;
+}
+
+/* POSICIONAMIENTO */
+.static{
+    position: static;
+}
+
+.relative{
+    background: crimson;
+    position: relative;
+    /* top: 20px;
+    left: 100px; */
+}
+
+.absolute{
+    background: purple;
+    position: absolute;
+    margin: 0;
+    right: 0px;
+    top: 0;
+}
+
+.fixed{
+    background: tomato;
+    position: fixed;
+}

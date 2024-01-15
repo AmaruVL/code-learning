@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Arial";
+}
+
+ul{
+    margin: 0 0 20px;
+    list-style-type: disc;
+    list-style-image: url(img/icono.png);
+    list-style-position:inside;
+    padding: 0;
+}
+.lista{
+    background-color: darksalmon;
+    font-size: 20px;
+}
+
+figure{
+    width: 200px;
+    height: 400px;
+    background:crimson;
+    margin: 30px auto;
+}
+
+.img{
+    width: inherit;
+    height: inherit;
+    
+}

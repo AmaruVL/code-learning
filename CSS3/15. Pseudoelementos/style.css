@@ -1,0 +1,104 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: salmon;
+    font-family: Arial;
+}
+
+.card{
+    width: 300px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: -20px -20px 0px 0px #fb968b;
+    border-radius: 10px;
+}
+
+.card__title{
+    /* border-bottom: 3px solid salmon; */
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+}
+
+input[type="text"]{
+    margin-left: 20px;
+    padding: 15px 3px;
+    background: crimson;
+    color: #fff;
+    border: none;
+    border-bottom: 4px solid #fff;
+    outline: none;
+}
+
+/* p::selection{
+    background: crimson;
+    color: #fff;
+}
+
+p::first-line{
+    color: blue;
+}
+
+p::first-letter{
+    font-size: 2rem;
+} */
+
+
+/* input[type="text"]::placeholder{
+    color: cyan;
+} */
+
+/* .card__text::before{
+    content: "Hola ";
+}
+
+.card__text::after{
+    content: " Villasante";
+} */
+
+.card__title::before, .card__title::after{
+    content: "";
+    display: block;
+    background: salmon;
+    height: 3px;
+    padding: 2px;
+    width: 100%;
+}
+
+/* .card__title::after{
+    content: "";
+    display: block;
+    background: salmon;
+    height: 10px;
+    width: 100%;
+} */
+
+
+/* EJEMPLO DE UN CONTADOR */
+ul{
+    counter-reset: contador;
+}
+
+li{
+    list-style: none;
+    padding: 0; 
+    margin-bottom: 10px;
+}
+
+li::before{
+    content: counter(contador);
+    counter-increment: contador;
+    background: salmon;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    margin-right: 4px;
+}

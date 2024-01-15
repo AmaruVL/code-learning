@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fafafa;
+}
+
+.img{
+    display: block;
+    width: 400px;
+    margin: 30px auto;
+    /* box-shadow: 8px 8px 10px #a7203b5b; */
+    /* box-shadow: 0 20px 40px -14px rgba(0, 0, 0, .25); */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .75);
+}
+
+.box{
+    background: steelblue;
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+    /* box-shadow: 100px 100px 0 0 crimson,
+                100px 0 darkblue,
+                0 100px darkgoldenrod; */
+    /* box-shadow: 3px 3px 8px 2px crimson; */
+
+}

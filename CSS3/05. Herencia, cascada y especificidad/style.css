@@ -1,0 +1,37 @@
+/* Tipos de elementos */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.enlaces{
+    display: inline-block;
+    text-decoration: none;
+    background: crimson;
+    color: white;
+    padding: 30px 20px;
+} */
+
+/* Cascada y especificidad */
+
+/* Especificidad de 113 */
+body>header>h2.title#title{
+    color: blue;
+}
+
+/* Especificidad de 10 */
+.header{
+    height: 400px;
+    background: crimson;
+    color: white;
+    border: 3px solid black;
+    text-align: center;
+}
+
+/* Herencia */
+.title{
+    border: inherit; 
+    text-align: initial;
+}

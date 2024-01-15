@@ -1,0 +1,117 @@
+ETIQUETAS HEADINGS
+Val del h1 al h6. Nota: h1 debe ser único, es el título de la página web.
+
+ETIQUETAS DE TEXTO
+Nota: Es importante conocer etiquetas semanticas (que da enfasis en el texto).
+em -> Etiqueta semantica. El texto lo pone en cursiva.
+i -> Texto en italica
+span -> Contenedor de elementos en linea
+mark -> Lo resalta de amarillo
+b -> Texto en negrita
+strong -> Etiqueta semantica, El texto lo pone en negrita.
+u -> Subraya el texto.
+small -> Etiqueta semantica (texto no relevante). El texto lo hace pequeño.
+s -> Lo tacha el texto.
+cite -> Etiqueta semantica. Sirve para citar, el texto lo pone en cursiva.
+sup -> Texto en superindice.
+sub -> Texto en subindice.
+br -> Salto de linea.
+abbr -> Sirve para poner texto abreviado. Se emplea el atributo title.
+
+ENLACES
+a -> Para poner enlaces. Se emplea el atributo href. 
+    href="./" -> Dirige a raiz (index).
+    href="../" -> Retroceder.
+    target="_blank" -> Abrir en nueva pestaña.
+
+IMAGENES
+img -> Para colocar imagenes. Se usan los atributos src y alt.
+
+ETIQUETAS DE CONTENIDO 
+Tienen importancia semantica. Sirve para estructurar una página.
+
+nav -> Define una sección de navegacion. Normalmente su estructura es de la forma:
+    <nav>
+        <a href="./"> Inicio </a>
+        <a href="#"> Acerca de </a>
+        <a href="#"> Contacto </a>
+    </nav>
+
+section -> Define una seccion. 
+
+header -> Define un encabezado en la página. Normalmente va menus de navegacion, logotipos
+
+main -> Define el contenido principal. Solo debe haber un main.
+
+footer -> Define el pie de página.
+
+aside -> Seccion relacionada con el contenido. Normalmente suele ir a la derecha.
+
+article -> Define una sección independiente del contenido
+
+LISTAS
+ol -> Lista ordenada
+ul -> Lista desordenada
+Nota: Para cada item de la lista se usa <li> -> list item.
+
+TABLAS
+table -> Para agregar una tabla.
+tr -> Agregar una fila.
+th -> Agregar nombre de la comlumna.
+td -> Agregar datos en la columna.
+caption -> Agregar descripciòn de la tabla.
+
+FORMULARIOS
+form -> Abrir formulario. Con el atributo action permite colocar el lugar donde se enviará la información.
+
+label -> Para mostrar una etiqueta al lado de un input. El atributo for permite enlazar el label con un input (el valor de for y el id del input deben ser iguales).
+
+input -> Entrada de datos, con el atributo type, permite modificar el tipo del input, exiten varios:
+    type="text"
+    type="email"
+    type="password"    
+    type="color"
+    type="number"
+    type="date"
+    type="reset" -> Para limpiar los inputs
+    type="checkbox"
+
+
+select -> Permite añadir un combobox.
+    option -> Se utiliza para agregar opciones al combobox(select). Tiene un atributo llamado selected que permite que muestre por defecto al inicio.
+
+Para poder colocar radiobuttons, se puede hacer lo siguiente:
+    <label>
+        <input type="radio" name="turno">Matutino
+    </label>
+    <label>
+        <input type="radio" name="turno">Nocturno
+    </label>
+      <label>
+        <input type="radio" name="turno">Mixto
+    </label>
+
+    Nota: Se usa el atributo name para enlazar los radiobutton y no se pueda elegir más de una opción.
+
+textarea -> Campo de texto.
+
+IFRAME
+iframe -> Permite agregar una página dentro de otra página.
+
+AUDIO Y VIDEO
+video -> Para agregar un video. 
+audio -> Para agregar audio.
+
+Atributos de video y audio:
+    src -> La direccion del video
+    controls -> Añadir controles
+    muted -> Iniciar el video silenciado
+    loop -> El video si termine, se vuelve a repetir.
+    autoplay -> Iniciar el video automáticamente al cargar la página.
+    poster -> Agregar miniatura al video (el valor es un enlace a una imagen). Solo funciona en videos.
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #9ab1f6;
+    font-family: 'Raleway', sans-serif;;
+}
+
+.container{
+    background: #fff;
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 3px 3px 10px  rgba(0, 0, 0, .2);
+    text-align: center;
+}
+
+.h1{
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.img{
+    width: 250px;
+}
+
+.copy{
+    text-align: left;
+    /* letter-spacing: 10px; */
+    /* word-spacing: 20px; */
+    /* text-shadow: 2px 2px 4px #0008; */
+    /* text-transform:uppercase; */
+    line-height: 30px;
+    /* font-variant: small-caps; */
+}
+
+.bold{
+    color: crimson;
+    font-weight: bold;
+}
+
+.enlace{
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: crimson;
+}
+
+

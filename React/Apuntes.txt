@@ -1,0 +1,40 @@
+Instalación con yarn:
+npm install -g yarn -> instalacion de yarn por primera vez
+yarn create vite -> crear proyecto de react
+yarn -> instalar las dependencias (yarn install)
+yarn dev -> iniciar app
+
+yarn add prop-types -> Instalar prop-types
+yarn add --dev jest -> Instalar Jest
+
+yarn build -> deplegar aplicación
+yarn remove [name-library] -> Desistalar librería
+
+Intalación con cra:
+npx create-react-app [nombre] -> crea proyecto de react con dependencias (más tardado).
+npm start -> iniciar app
+
+Shortcuts
+Ctrl + k + c -> comment lines
+
+SNIPETS
+rafc -> react arrow function component
+anfn -> anonimous function
+useStateSnipet -> Hook useState
+
+
+
+TESTS
+yarn test -> Ejecutar prueba
+yarn add --dev @types/jest -> Añadir predicciones la intelligence de comandos de jest
+
+yarn add --dev babel-jest @babel/core @babel/preset-env -> instalar babel a jest
+
+yarn add --dev @testing-library/react -> Instalar testing library
+yarn add -D jest-environment-jsdom -> Instalar jsdom
+yarn add -D @babel/preset-react -> Instalaciones
+
+INSTALACIONES
+css animation -> Clases para poner animaciones a elementos
+react-form-hook -> Hooks para controlar formularios
+query-string -> Para manipular querys

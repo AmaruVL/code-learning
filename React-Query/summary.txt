@@ -1,0 +1,13 @@
+HOOKS:
+useQuery({
+  refetchOnWindowFocus: false, -> Realizar petición al enfocar ventana
+  staleTime: 1000, -> Tiempo que los datos se mantendrán Fresh (tiempo en milisegundos)
+  placeholderData: [options] -> Mostrar datos por defecto hasta que obtenga de la peticion
+  initialData: [options] -> Similar a placeholderData, con la diferencia que los datos los mantiene como stale hasta realizar un refetch
+})
+
+DATA:
+Fresh: Datos que recien se obtuvieron
+Fetching: Volver a obtener datos
+Pause: Pausar peticion
+Stale: Los datos estan "viejos"

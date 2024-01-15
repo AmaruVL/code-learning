@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    background: orangered;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.card{
+    margin: 20px auto;
+    width: 400px;
+    /* border: 4px solid black; */
+    border-radius: 20px;
+    padding: 20px 0;
+    background: #f0f0f0;
+    /* background: blanchedalmond; */
+}
+
+.img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px auto;
+    /* border: 20px groove brown; */
+    /* border-radius: 20px 30px 40px 50px; */
+    border-radius: 50%;
+}
+
+.name{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cta{
+    background: crimson;
+    display: block;
+    width: 130px;
+    border-radius: 3px;
+    padding: 15px 0;
+    text-decoration: none;
+    color: white;
+    margin: 25px auto;
+    text-align: center;
+}
+

@@ -1,0 +1,58 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--color: crimson;
+}
+
+.title {
+	font-size: 3rem;
+	color: var(--color);
+	margin: 40px 0;
+	text-align: center;
+	font-family: monospace;
+}
+
+/* @media print {
+	.title {
+		color: steelblue;
+		font-size: 5rem;
+		text-align: right;
+		font-family: cursive;
+	}
+} */
+
+/* @media screen and (max-width:600px) {
+	:root {
+		--color:white
+	}
+	
+	.title {
+		background-color: black;
+		color:var(--color);
+	}
+} */
+
+/* @media screen and (orientation:landscape){
+	.title {
+		margin: 0;
+		color:steelblue;
+		background: black;
+		height: 100vh;
+	}
+} */
+
+/* @media screen and (orientation: portrait) and (max-width: 600px){
+	.title {
+		text-align: left;
+	}
+} */
+
+@media screen and (max-width:400px), (min-width:900px) {
+	.title {
+		background: black;
+	}
+}

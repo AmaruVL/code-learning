@@ -1,0 +1,593 @@
+Atajos teclado:
+ctrl + k + u -> Comentar sección de código
+
+NOTAS:
+- Las imagenes son de tipo inline-block
+- Al aplicar la prop color en una caja hace que la variable "currentColor" se actualize al color dado.
+Esta variable interviene en el color de bordes, letra, sombras, etc y por defecto es negro.
+
+SELECTORES
+- SELECTORES BÁSICOS
+nav {...} -> Selecionar elementos de tipo nav
+
+.titulo {...} -> Seleccionar a elementos con la clase "titulo"
+
+#titulo {...} -> Seleccionar a elementos con id = titulo
+
+* {...} -> Selector universal
+
+[href = "link.com"] {...} -> Seleccionar elementos que tengan como atributo href y sea igual a "link.com" 
+
+[href ^= "https"] {...} -> Seleccionar elementos que tengan como atributo href y estos empiezen con https.
+
+[href $= "org"] {...} -> Seleccionar elementos que tengan como atributo href y estos terminen con org.
+
+[href *= "alex"] {...} -> Seleccionar elementos que tengan como atributo href y estos contengan la alex.
+
+- SELECTORES COMBINADORES
+h2, a {...} -> Selecciona a h2 y a. Separar en comas para seleccionar más de un selector.
+
+.contenedor a {...} -> Selecciona los DESCENDIENTES (puede ser hijo, ñieto, vizñieto, etc) a que están en .contenedor.
+
+.contenedor>p {...} -> Selecciona el HIJO directo p cuyo padre es .contenedor.
+
+nav.contenedor {...} -> Selecciona un nav que tenga la clase "contenedor". Nota: nav.contenedor != nav .contenedor
+
+nav.contenedor.titulo {...} -> Selecciona a un nav que tenga la clase "contenedor titulo".
+
+h2+p {...} -> Selecciona al hermano adyacente (seguido) de h2, en este caso p.
+
+h2~p {...} -> Selecciona a todos los hermanos p que están después de h2.
+
+BOX MODEL
+
+width, height -> Propiedades para cambiar el ancho y alto de la caja
+
+margin: 10px (a todos los lados)
+margin: 10px 20px 30px 40px (top, right, bottom, left respectivamente)
+margin: 10px 20px (top, bottom y right, left)
+margin: 10px 20px 30px (top, right y left, bottom ) 
+
+margin: 0 auto -> centra la caja solo si es en bloque y con un width definido.
+
+Colapso de margenes -> Cuando 2 o más margenes están juntas, se fucionan y  prevalece el margin con mayor valor.
+Tambien se da cuando un elemento hijo se le da un margen, el padre se apropia del margen. Para solucionar esto, se debe interponer una capa entre el hijo y el padre, por ejemplo podemos poner un padding de 0.1px al padre o sino poner un borde transparente
+
+padding: -> Es un shorthand, por defecto incrementa el tamaño de la caja.
+
+box-sizing -> Modifica el comportamiento de la caja.
+    content-box -> Valor por defecto, el width y height se establecen al contenido de la caja, por lo que el tamaño total de la caja se incrementará con el padding y border.
+
+    border-box -> El width y height definen el tamaño total de la caja. El tamaño del contenido se adaptará de acuerdo al padding y border que se le de.
+
+HERENCIA, CASCADA Y ESPECIFICIDAD
+display -> define que un elemento es en linea o bloque.
+    inline -> Para que sea elemento en linea. Tienen problemas con el margin top y bottom, no se puede definir un width y un height, no funciona correctamente el padding.
+
+    block -> Para que sea elemento en bloque.
+
+    inline-block -> Para que el elemento funcione en linea y se pueda modificar como si fuera block (modificar width, height, margin-top, margin-bottom, padding, etc). Nota: No se puede centrar usando margin: 0 auto;
+
+    none -> Hace que deseparezca de la página.
+
+- ESPECIFICIDAD
+!important -> Rompe el tema de especificidad, recomendable no usarlo.
+1000 -> inline (difinir estilos en el mismo html usando el tributo style)
+100 -> IDs
+10 -> Clases, atributos, pseudo-clases
+1 -> Elementos, pseudo-elementos
+
+-HERENCIA 
+Hay propiedades que se heredan del padre, incluso en el mismo navegador se puede visualizar que propiedades heredaron del padre.
+Para forzar que algunas propiedades que por defecto no se heredan se hereden, se usa el valor "inherit".
+    ex: border:inherit; -> El hijo hereda el borde que tiene el padre.
+Para que una propiedad que se hereda por defecto no se herede, se usa el valor "initial".
+    ex: color: initial; -> El hijo restablece el valor heredado al valor inicial por defecto del navegador.
+
+BORDER 
+border: width style color (se aplica en todos los lados)
+border es un shorthand respectivamente de:
+    border-width
+    border-style -> solid, groove, dotted, dashed...
+    border-color
+    A la vez, las 3 propiedades son shorthands, por ejemplo:
+    border-width: 10px 20px 30px 40px;
+
+Tambien se puede realizar cambios de un borde en especifico de la siguiente manera:
+    border-top: 10px solid red; -> Lo mismo para la left, bottom, right.
+
+La anterior forma es un shorthand de las siguientes propiedades:
+    border-top-width: ;
+    border-top-style: ;
+    border-top-color: ;
+
+NOTA: Existe la propiedad outline que es igual al borde solo que no ocupa espacio.
+    outline: width style color; -> Shorthand
+
+BORDER-RADIUS
+Sirve para redonder las esquinas de una caja. Es un shorthand cuyos valores son a continuación.
+    border-radius: 10px 20px 30px 40px; -> Esquina top-left, top-right, bottom-right, bottom-left respectivamente.
+
+    border-radius: 50px 20px; -> (top-left, bottom-right) y (top-right, bottom-left) respectivamente.
+
+Los propiedades individuales del shorthand son:
+    border-top-left-radius: ;
+    border-top-right-radius: ;
+    border-bottom-left-radius: ;
+    border-bottom-right-radius: ;
+
+Para hacer que la caja sea un circulo, es recomendable usar border-radius: 50%; (en cajas cuadradas).
+
+BOX-SHADOW
+Añade sombras a la caja. Normalmente usado en el diseño web.
+Sintaxis: 
+    box-shadow: h-offset v-offset blur spread color; -> Donde:
+        h-offset -> Es el desplazamiento horizontal.
+        v-offset -> Es el desplazamiento vertical.
+        blur     -> Que tanto se va a difuminar la sombra.
+        spread   -> Que tanto se va a esparcir la sombra. Tambien se puede entender como que tan grande quieres que sea la sombra.
+        color     -> Color de la sombra.
+
+    Tambien minimo requiere de 2, 3 o 4 valores: 
+    - box-shadow: h-offset v-offset; -> blur:0, spread: 0, color: currentColor (es una variable y es el color definido en la caja ex: color:crimsom) por defecto.
+    - box-shadow: h-offset v-offset color;
+    - box-shadow: h-offset v-offset blur color;
+
+    Tambien se puede poner más de una sombra en una sola caja separando por comas.
+    box-shadow: 100px 100px 0 0 crimson,
+            100px 0 darkblue,
+            0 100px darkgoldenrod; -> se tiene 3 sombras para una caja.
+
+DROP-SHADOW
+Se emplea para mostrar sombras en imagenes con fondos trasparentes. La sintaxis es:
+    filter: drop-shadow(h-offset v-offset blur color);
+    ex: filter: drop-shadow(0 0 40px gray);
+
+COLORES
+- RGB
+- Hexadecimal
+- HSL -> Definido por:
+    hue (matiz) -> Color por la posición en el circulo cromático. [De 0 a 360].
+    saturation (saturacion) -> [De 0% a 100%]
+    lightness (brillo).
+
+BACKGROUND
+Para realizar cambios en el fondo de un elemento.
+
+background-color -> Dar color de fondo
+background-image -> Poner una imagen de fondo (sin modificar background-color)
+    ex: background-image: url(img/sun.png); -> Poner las imagenes (repetidas)
+    background-image: url(img/sun.png), url(img/spidy.png); -> Poner 2 imagenes al mismo tiempo.
+background-repeat -> Para modificar el comportamiento de repetición de background-image.
+    Valores:
+        repeat; -> Valor por defecto, hace que se repita la imagen.
+        no-repeat; -> Hace que no se repita.
+        repeat-x; -> Repertir en eje x
+        repeat-y; -> Repetir en eje y
+
+background-position -> Para posicionar la imagen, tiene los valores de:
+    top, right, left, bottom, center y tambien se puede poner en medidas como por ejemplo (30px, -50px), etc. 
+    
+    Sintaxis:
+    ex: background-position: bottom right; -> bottom en eje X y right en eje Y.
+
+    ex: background-position: top 10px right 30px; -> Posicionar en eje X a top y despues mover 10px al lado contrario, lo mismo para el eje Y.
+
+    ex: background-position: top; -> Eje X con top y Eje Y con center por defecto.
+
+background-size -> Permite modificar el tamaño de la imagen de fondo. Tiene los valores de:
+    background-size: 10px; -> Da un width = 10px y height un aspect ratio.
+    background-size: 200px 100px; -> Da un width = 200px y height = 100px.
+    background-size: contain; -> Escala la imagen al mayor tamaño posible sin recortar ni estirar a la imagen.
+    background-size: cover; -> Escala la imagen al mayor tamaño posible sin estirar, pero lo recorta.
+
+background-attachment -> Permite moficicar que tan fijo queremos la imagen de fondo. Se tiene los valores de: 
+    scroll; -> No hace ningun cambio (valor por defecto)
+    fixed; -> Tiene valor fijo y el width y height será del 100% del body. Se usa para formar el efecto parallax, efecto hero.
+
+Para colocar gradientes se usa background-image seguido de la funcion linear-gradient o radial-gradient.
+    Sintaxis:
+    linear-gradient(direcction, color stop, color stop). 
+    Para definir las direcciones se usa:
+        to top -> De abajo a arriba.
+        to bottom -> De arriba a abajo (Valor por defecto).
+        to right -> Hacia la derecha.
+        to left -> Hacia la izquierda.
+
+        Se puede mezclar como por ejemplo:
+        to top left -> Hacia arriba a la izquierda
+
+        ex: background-image: linear-gradient(to top, red, blue)
+
+        Se puede definir de forma especifica en grados (degrees)
+        20deg -> Girado 20deg.
+    
+        ex: background-image: linear-gradient(90deg, red, blue)
+
+    Los stop sirven para indicar a partir de que porcentaje se empezará a degradar.
+        ex: crimsom 30%, blue 40% -> A partir del 30% de la caja degradar crimsom y lo mismo con blue.
+
+    Es posible combinar gradientes con imagenes,para eso primero en la propiedad background-image definir el gradiente y despues la imagen, ex:
+        background-image: linear-gradient(blue, red), url(ruta de la imagen); 
+        NOTA: Queda mejor si se usan colores con transparencia.
+
+TEXTOS
+text-align -> Alinear texto. Si hay una imagen en un contenedor padre, la imagen se comporta como texto y se puede usar esta propiedad (usar la propiedad en el contenedor padre para que funcione).
+    valores de text-align: left | right | center | justify
+
+
+letter-spacing -> Espaciado de las letras. Acepta valores positivos y negativos.
+
+word-spacing -> Espaciado entre palabras. Acepta valores positivos y negativos.
+
+text-shadow -> Sombreado en el texto. Su sintaxis es:
+    text-shadow: h-offset v-offset blur color;
+
+text-transform -> Para realizar transformaciones en el texto como texto en mayuscula, minuscula, capitalize, etc.
+    text-transform: valor; -> Valores: uppercase, lowercase, capitalize
+
+line-height -> Sirva para modificar la altura de cada linea. Un truco para centrar una sola linea en un contenedor es que el height del contenedor y el line-height tengan el mismo valor. Tambien se puede usar unidades como 1, 1.5, 2, etc.
+
+text-decoration -> Decoracione en el texto como el subrayado, etc. Es un shorthand.
+    text-decoration: line style color;
+    Cuyas propiedades individuales son:
+
+        text-decoration-line -> Tipo de linea que se usará. Valores: underline (linea bajo), overline (linea encima), line-through (tachado), none (nada). Se puede conbinar las lineas como por ejemplo:
+            text-decoration-line: line-through overline underline;
+            text-decoration-line: overline underline;
+        
+        text-decoration-style -> Define el estilo de linea. Tiene valores como solid, double, dotted, dashed, wavy.
+
+        text-decoration-color -> Da un color a la linea.
+
+font -> Es un shorthand que contempla los siguientes valores:
+
+    font-variant -> Permite cambiar la variante de letra entre normal y small-caps.
+
+    font-weight -> Sirve para cambiar el grosor de letra (peso). Se puede usar bold o números.
+
+    font-size -> Tamaño de fuente. Por defecto las fuentes tienen 16px de tamaño.
+
+    font-style -> Estilo de letra, tiene los valores de "italic", "oblique" donde italic es más inclinado que oblique si es que la fuente de letra lo permite.
+
+    font-family -> Fuente de letra. Su valor se hereda en casi todos los elementos.
+
+UNIDADES DE MEDIDAS 
+- UNIDADES RELATIVAS
+rem -> depende de la raiz del documento html. Por defecto se definen valores ya definidos en html como viene a ser el font-size = 16px. Si cambias el tamaño de letra en el navegador, rem cambiará de 16px a otro valor de acuerdo al tamaño de letra que seleccione.
+
+em -> Es relativo al tamaño de fuente del padre o del elemento. Cuando cambias el valor del font-size, el em cambia al nuevo valor.
+
+porcentajes -> Los porcentajes toma como base el padre, si a un hijo le das un width del 100%, entonces ocupará todo el width del padré mas no de todo lo body a menos que el padre ocupe todo el body. Es necesario que el width y el height del padre esten definidos absolutamete (ex: usando px).
+
+Nota: viewport-> Es todo lo que se ve de la página web.
+viewport width (vw) -> Relativo al tamaño del width del viewport.
+viewport height (vh) -> Relativo al tamaño del height del viewport.
+
+DELIMITANDO MEDIDAS
+min-width -> Sirve para limitar el width a un valor mínimo de un elemento.
+min-height -> Sirve para limitar el height a un valor mínimo de un elemento.
+max-width -> Sirve para limitar el width a un valor máximo de un elemento.
+max-height -> Sirve para limitar el height a un valor máximo de un elemento.
+
+Nota: Si realizamos lo siguiente:
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 200px;
+    min-height: 200px;
+Sin definir width ni height, la caja tendrá las dimensiones de 400x200 (width x height), tiene 400px de width ya que el div al ser elemento en bloque, ocupará el width máximo que pueda y tiene 200px de height por que por lo general las dimensiones se inicializan del valor minimo.
+
+LISTAS
+Siempre las listas ya sean ordenadas o desordenadas tienen un padding por defecto (que ocupan las viñetas o la numeración), si quitamos el padding, las viñetas o numeración no aparecerán.
+
+list-style -> Define el estilo de la lista. Si se aplica a un elemento ul o ol, cambiaran todos los li que esten dentro. Si se aplica a un li, solo se modificara ese li.
+    list-style: type image position;
+
+    list-style-type -> Define el tipo de viñeta, tiene los valores de: disc (por defecto), decimal (numeracion), square(cuadrados), lower-roman (nros romanos en minuscula), upper-roman (nros romanos en mayuscula), circle, none.
+
+    list-style-img -> Permite agregar imagen como viñeta. Se puede usar iconos.
+        list-style-img: ulr(...);
+
+    list-style-position -> Permite definir la posicion de las viñetas.
+        list-style-position: valor; -> valores: outside (por defecto) [fuera de la caja, en el area del padding], inside (dentro del contenido)
+
+IMAGENES 
+object-fit -> Ajuste del objeto. Tiene los valores de:
+    fill -> Rellena la imagen al contendor estirando la imagen.
+
+    none -> No se realiza ningun cambio, se mantiene en su resolución original.
+
+    contain -> Escalar la imagen al contenedor sin recortarlo.
+
+    cover -> Escala la imagen y recorta la imagen.
+
+PSEUDOCLASES
+Selecciona el estado de un elemento. Se puede usar de las siguientes maneras:
+    elemento:pseudoclase {...} -> Selecciona de acuerdo a su pseudoclase en el elemento.
+
+    :pseudoclase {...} -> Es como decir "*:pseudoclase". Usualmente utilizado en la pseudoclase root
+    
+    elemento :pseudoclase {...} -> Es equivalente a "elemento *:pseudoclase"
+
+Tipos de pseudoclases:
+    link -> Selecciona a los elementos "a" que no fueron visitados en el navegador.
+    
+    visited -> Selecciona a los elementos "a" que fueron visitados en el navegador.
+
+    hover -> Cuando el cursor está encima del elemento. En caso de un dispositivo movil, hover es cuando se preciona el elemento.
+
+    active -> Cuando se presiona el elemento hasta que se deje de hacer click.
+
+    target -> Selecciona al elemento que fue apuntado por medio de un # o un url.
+
+    focus -> Selecciona el elemento cuando se está activo en el. Por ejemplo en un input o un elemetno con el atributo "contenteditable".
+
+    checked -> Solo funciona para inputs de tipo "radio" y "checkbox". Cuando se realiza un check.
+
+    focus-within -> Selecciona un elemento que tenga un hijo en el estado focus.
+
+    root -> Selecciona a la raiz del documento html. Normalmente se usa para definir variables.
+
+    not -> Selecciona para filtar. Por ejemplo:
+        h3:not(.title){...} -> Seleccionar a todos los h3 que no tengan la clase title.
+
+        h3:not(:hover){...} -> Seleccionar a todos los h3 que no estan en el estado hover.
+
+        h3:not(.title):not(:hover) -> Seleccionar a todos los h3 que no tengan la clase title y no esten el estado hover
+
+    - PSEUDOCLASES TYPE
+    only-of-type -> Selecciona a los elementos que son únicos en su sección o en su padre. Por ejemplo:
+        .box:only-of-type{...} -> Seleccionar a los únicos elementos en su padre que tengan la clase box.
+
+    first-of-type -> Selecciona al primer elemento de su tipo que esté dentro del contenedor.
+
+    last-of-type -> Selecciona al ultimo elemento de su tipo que esté dentro del contenedor.
+
+    nth-of-type(n) --> Selecciona al n-esimo elemento de su tipo que este dentro del contenedor. Nota: n tambien puede ser los valores de "odd" (impares) y "even" (pares). Ejemplos:
+        .box:nth-of-type(2) -> Seleccionar a los 2dos elementos de su tipo (con la clase "box") que esté dentro del contenedor.
+
+        .box:nth-of-type(odd) -> Seleccionar a los elementos impares de su tipo (con la clase "box") que esté dentro del contenedor.
+
+        Nota: n funciona como iterador y se puede hacer cosas como:
+        .box:nth-of-type(n) -> Seleccionar a los elementos [con n = 0,1,2,... hasta que deje de haber coincidencias] de su tipo (con la clase "box") que esté dentro del contenedor.
+
+        .box:nth-of-type(2n) -> Seleccionar a los elementos [con n = 0,2,4,6,... hasta que deje de haber coincidencias] de su tipo (con la clase "box") que esté dentro del contenedor.
+
+        .box:nth-of-type(2n+1) -> Seleccionar a los elementos [con n = 1,3,5,7,... hasta que deje de haber coincidencias] de su tipo (con la clase "box") que esté dentro del contenedor.
+
+    nth-last-of-type(n) -> Selecciona al n-esimo elemento de su tipo que este dentro del contenedor contando del final al inicio. Nota: n tambien usar como se usa en nth-of-type.
+
+    - PSEUDOCLASES CHILD
+    Son pseudoclases condicionales.
+
+    only-child -> Selecciona a los elementos que son hijos únicos (es decir no tengan hermanos), no importa el tipo.
+
+    first-child -> Selecciona al primer hijo de su contenedor. Por ejemplo:
+        div:first-child{...} -> Selecciona a los elementos div que son los primeros hijos de su contenedor.
+
+    last-child -> Selecciona al ultimo hijo de su contenedor.
+    
+    nth-child(n) -> Selecciona el n-esimo hijo de su contenedor. Los valores de n funciona igual que nth-of-type(n).
+
+    nth-last-child(n) -> Selecciona el n-esimo hijo de su contenedor contando del final al inicio. Los valores de n funciona igual que nth-child(n).
+
+PSEUDOELEMENTOS
+Los pseudoelementos se agregan al final del selector. No describen un estado especial a diferencia de las pseudoclase, sino permiten añadir estilos a una parte concreta del documento o del elemento. 
+
+Sintaxis:
+    elemento::pseudoelemento {...}
+
+    ::pseudoelemento {...} -> NOTA: Aplica a todos los elementos con ese pseudoelemento. Igual ocurre con las pseudoclases.
+
+Tipos de pseudoelementos 
+    selection -> Selecciona a los que seleccionamos con el cursor.
+
+    first-line -> Selecciona a la primera linea de un texto.
+
+    first-letter -> Selecciona la primera letra de un texto.
+
+    placeholder -> Modifica el placeholder del input del atributo type=text.
+
+    - PSEUDOELEMENTOS BEFORE Y AFTER -> Permiten insertar elementos en el navegador sin estar escritos en el html.
+
+    La forma en que los inserta son:
+    <element>
+        ::before
+        Contenido 
+        ::after
+    </element>
+
+    Algunas propiedades empleadas en estos pseudoelementos son:
+        content -> Para colocar el contenido (obligatorio colocar algo para que se renderize). Puede ser un url (para imagenes) o texto (entre comillas "").
+
+        Los demas que se usan para un elemento. A veces es necesario que se defina el display para que se cree el pseudoelemento.
+        
+POSICIONAMIENTO
+- STATIC -> Es el valor por defecto por cada uno de los elementos. Es estático, o sea, no se podrá desplazar el elemento.
+    ex: position: static
+
+- RELATIVE -> Hace que se desbloqueen 4 propiedades para poder moverlo, estos son: top, right, left, bottom. Se llama relative porque se mueve dependiendo de su posición original. Su espacio del elemento se mantiene en el navegador.
+    ex: position: relative;
+        top: 100px; -> Empuja 100px hacia el bottom
+        left: 40px; -> Empuja 40px hacia el right
+        bottom: 200px; -> Empuja 200px hacia el top
+
+- ABSOLUTE -> Similar a relative con la diferencia en que esta propiedad hace que pierda su espacio en el navegador, en cambio relative no. Este si no está posicionado a un padre posicionado (padre con alguna propiedad de posicionamiento diferente de static), por defecto se posiciona con respecto al body.
+    ex: position: absolute
+
+    NOTA: Comunmente se usa position:relative en el padre y position:absolute en el hijo, para poder desplazar al hijo con respecto al padre.
+
+Propiedad z-index -> Permite cambiar la posición de los elementos de acuerdo al eje Z, puede tomar valores negativos como positivos. Por defecto, tiene el valor "auto". Está propiedad solo funciona con elementos posicionados (relative, absolute, fixed).
+ 
+- FIXED -> Tambien al igual que absolute, pierde su espacio en el navegador. Fixed está posicionado con respecto al navegador o viewport (no importa si tiene un padre que esté posicionado) y se mantiene fijado a pesar de que se use el scroll.
+    ex: position: fixed
+
+VARIABLES 
+Normalmente se declaran en :root. Usa la siguiente sintaxis:
+    Declarar variable -> --nombre: valor;
+    Usar variable -> var(--nombre)
+
+Fallbacks -> Se usa cuando no se encuentra una variable y se aplique estilo por defecto.
+    ex: color: var(--color1, white) -> El color white se aplicara si la var color1 no se encuentra
+    ex: color: var(--color1, var(--color2)) -> Se pueden poner variables como fallbacks
+
+Scope -> Las variables tienen un ámbito. Se se declara en un elemento, no funcionará en otro. Por esa razón se declara en :root (global). Pero si se puede modificar valor de las variables dentro de su propio ámbito.
+    ex:
+    :root {
+        --color1: white;
+    }
+    .element {
+        --color1: black; -> Modificando valor (no afectara a las demas componentes, a menos que sean hijos)
+    }
+
+RESPONSIVE DESIGN
+Etiqueta viewport
+    ex: <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    Atributos:
+        initial-scale -> Establece el zoom inicial de la página. 1 por defecto.
+        minimun-scale y maximum-scale -> Establece el nivel máximo y mínimo del zoom.
+        user-scalable -> Define si el usuario podrá o no hacer zoom a la página.
+
+Orientaciones
+    portrait -> En vertical
+    landscape -> En horizontal
+
+Imagenes responsivas
+    Preocurar dar la propiedad max-width: 100% a todas las imágenes y usaar la etiqueta <picture/>
+
+- Usar unidades relativas y porcentajes
+
+Media querys:
+    Sirven para cambiar ciertos valores cuadno el viewport tenga un cierto tamaño y orientación. 
+    NOTA: Los media querys tambien respetan la especifidad, herencia y cascada.
+
+    ex:
+    p {
+        font-size: 1.4 rem;
+    }
+    @media (max-width: 700px) {  -> Aplicar cuando tenga un ancho que no pase de 700px
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    Sintaxis:
+        @media <media-type> and (expression) {...}  -> Con and
+        @media <media-type> , (expression) {...}  -> Con or (la coma indica un or)
+
+        <media-type> -> Tipo de dispositivo. 
+            Valores: 
+                print -> cuando se envia a imprimir (ctrl + p)
+                speech -> Para sintetizadores de voz
+                screen -> Pantallas de dispositivos
+
+FLEXBOX
+Para aplicarlo, se requiere un elemento contenedor (flex container) y los hijos (flex items).
+
+    display: flex; -> Se le aplica al padre. Y hace que un elemento sea en bloque.
+
+Propiedades que les pasan a los hijos por defecto al aplicar display: flex; son: 
+    - Se ponen en linea (flex-direction: row -> valor por defecto) 
+    - No exceden el tamaño del contenedor (por mas que sean grandes, se encogen)
+    - Se estiran en el eje Y si no tienen definido el height (align-items: stretch -> valor por defecto)
+
+Flexbox trabaja en 1 solo eje, en el eje principal (main axis) que va perpendicular al cross axis
+
+    flex-direction -> Indica la direccion del main-axis. 
+        Valores: row (por defecto) | column | row-reverse | column-reverse
+
+    display: inline-flex; -> Hace que sea elemento en linea y permite usar las propiedades que tiene flex
+
+    flex-wrap -> Define comportamiento de los flex-items cuadno su tamaña rebasa el tamaño del main axis
+        Valores: nowrap (por defecto) | wrap | wrap-reverse (manda elementos al final del cross axis)
+
+    flex-flow -> Shorthand de flex-direction y flex-wrap
+        ex: flex-flow: flex-direction flex-wrap;
+
+Alineamiento: Distribuir el espacio sobrante entre los flex-items. 
+Se vera propidades que tiene el FLEX-CONTAINER:
+    justify-content -> Alinear en main-axis
+        Valores:
+            flex-start -> Alinea al inicio del main-axis. Valor por defecto.
+            flex-end -> Alinea al final del main-axis
+            center -> Centrar en el eje del main-axis
+            space-between -> Distribuir espacio equivalente. Primer y ultimo flex item pegado a las esquinas.
+            space-around -> Distribuir espacio equivalente. Mismo espacio a ambos lados del flex item.
+            space-evenly -> Distribuir espacio equivalente. Mismo espacio entre cada flex item
+
+    align-items -> Alinear en cross-axis
+        Valores:
+            stretch -> Estirar flex-items al máximo en el cross-axis. Valor por defecto. No funciona si tiene un width o height definido.
+            flex-start -> Alinea al inicio del cross axis.
+            flex-end -> Alinea al final del cross axis.
+            center -> Centrar flex-items en el cross axis.
+            baseline -> Alinear con respecto a la referencia de su linea base.
+
+    align-content -> Alinear en el main-axis cuando los elementos se desbordan (wrap). 
+        NOTA: Solo funciona con flex-wrap: wrap;
+        Valores:
+            normal -> Valor por defecto
+            stretch -> Estirar al maximo.
+            flex-start | flex-end | center | space-between | space-around | space-evenly -> Mismos que usa justify-content.
+
+Se verá propiedades que tienen los FLEX-ITEMS:
+    order -> Cambiar la posición de un flex-item. Valor 0 por defecto. Se ordena de menor a mayor. Se puede usar valores negativos y positivos. Valores permitidos: [-,0,+] -> de menos a mas
+
+    flex-grow -> Determina cuanto crece un elemento con relacion a otros de acuerdo al espacio sobrante. Afecta en el main-axis. Valor por defecto de 0. Valores permitidos: [0,+] -> de 0 a mas
+
+    flex-shrink -> Determina cuanto se encoge un elemento con relacion a otros de acuerdo al espacio faltante. Afecta en el main-axis. Valor por defecto de 1. Usar con nowrap. Valores permitidos: [0,+] -> de 0 a mas
+
+    flex-basis -> Tamaño inicial del elemento antes de que sufra un cambio de distribución de espacio. Valor por defecto es auto. 
+        NOTA: Predomina al width o height, dependiendo cual eje sea el main axis. pero no al max-width o max-height.
+
+    Shorthand para flex-items:
+    flex: grow shrink basis;
+
+    ex: 
+        flex: auto -> grow = 1, shrink = 1, basis = auto
+        flex: none -> grow = 0, shrink = 0, basis = auto
+        flex: 1 -> grow = 1, shrink = 1, basis = 0
+        flex: 10em -> grow = 1, shrink = 1, basis = 10em
+        flex: 1 100px -> grow = 1, shrink = 1, basis = 100px
+
+    align-self -> Alinear a un elemento a traves del flex axis. Predomina a align-items.
+        Valores:
+            stretch | flex-start | flex-end | center | baseline -> Mismos que align-items
+
+NOTA: Si el padre tiene es un flex-container, solo los hijos seran flex-items, los nietos no serán flex-items.
+NOTA: Los flex-items tambien desbloquean la propiedad z-index.
+
+TRUCO: Usando margin-(left|right|top|bottom):auto puedes mover un elemento a las esquinas.
+
+    gap -> Agrega espaciado SOLO entre los elementos. Sin la necesidad de usar margenes.
+        ex: gap: 20px -> 20px de espaciado entre cada flex-item.
+
+Suele ocurrir problemas de dimensiones cuando se usan imagenes con flex-basis. Se recomienda usar <picture> en ves de <img> o una un <img> como hijo de un <picture>.
+
+1era opcion:
+    html:
+    <picture class="figure">
+
+    css:
+    .figure {
+        flex-basis: 50%;
+        height: 100%;
+        background-image: url(.../img)
+    }
+
+2da opcion:
+    html:
+    <picture>
+        <img class="img" src=".../img">
+    </picture>
+    
+    css:
+    .figure {
+        flex-basis: 50%;
+        height: 100%;
+    }
+    .img {
+        width: 100%;
+        height: 100%;
+    }

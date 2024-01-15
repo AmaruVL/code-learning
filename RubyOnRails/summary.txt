@@ -1,0 +1,46 @@
+rails new [name] --api -> Crear template para api
+rails generate controller api/v1/articles index show create update destroy --skip-helper --skip-assets --skip-template-engine --skip-test-framework -> Generar controllers automáticamente
+rail g model article title:string body:string author:string --skip-helper --skip-assets --skip-template-engine --skip-test-framework -> Crear modelo automaticamente
+
+GENERAL STEPS - API REST SERVER
+rails new nameapp --api
+rails g scaffold name attributes:type -> ex: rails g scaffold book title:string body:text
+rails db:migrate -> Crear BD
+
+Modificar archivo routes.rb (namespaces... api/v1)
+En controllers crear directorio /controllers/api/v1 y trasladar ahi el controlador
+Cambiar clase a Api::V1::ClasName
+
+
+-----------------
+rails destroy model Rating
+
+rails routes -> Mostrar rutas
+
+rails new [name] -d postgresql -> Crear proyecto con motor de BD postgre
+rails db:create -> Crear base de datos
+rails g scaffold book title:string body:text -> Generar plantilla de put, get, delete, post
+
+rails generate model Product title:string description:text price:integer -> Crear modelo productos con sus atributos
+rails db:migrate -> Realizar migracion (crear tabla en la db a partir del modelo)
+rails console -> Abrir console de ruby
+
+bundle install -> Instalar dependencias
+
+CONVENCION DE RAILS
+- Modelos en singular
+- Controladores en plura 
+
+SINTAXIS
+<% %> -> Poner codigo ruby en html (nameFile.html.erb)
+<%= %> -> Mostrar resultado del codigo ruby
+
+
+ROUTES
+http://127.0.0.1:3000/rails/info/routes -> Lista de rutas creadas
+
+METHODS FOR CLASSES (MODELS)
+
+Class.all -> Retorna todas las clases guardadas en la db
+Class.find_by()
+Class.create(attribute:value, attribute2:value2, ...)

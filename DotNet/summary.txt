@@ -5,3 +5,7 @@ dotnet build -> Compilar el codigo
 dotnet run -> Compilar y ejecutar
 dotnet run --no-build -> Ejecutar sin compilar
 dotnet bin/Debug/net7.0/ServerBienestar.dll  --urls http://127.0.0.1:5902 -> Ejecutar en produccion en puerto especifico
+
+OTHER COMMANDS:
+dotnet --list-sdks -> Ver SKDs instalados (para desarrollar y ejecutar)
+dotnet --list-runtimes -> Ver runtimes instalados (solo para ejecutar)

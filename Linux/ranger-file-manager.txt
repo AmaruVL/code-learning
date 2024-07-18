@@ -1,0 +1,6 @@
+// Intall in debian/ubuntu
+sudo apt install ranger
+
+// Commands
+Shift + s -> Open terminal in current directory
+Ctrl + D -> Back to ranger from current directory

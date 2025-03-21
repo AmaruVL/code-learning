@@ -14,5 +14,6 @@ mysql [database]> drop database <tableName>; -> Borrar base de datos
 
 #> mysqldump -h [host] -u [user] -p [database] > [nameFile].sql -> Crear copia base de datos
   |> mysqldump -h localhost -u root -p dbmuni_core > 202310171258-backup.sql
+  |> mysqldump --ssl-mode=DISABLED -h 10.0.9.81 -u sgd -p db_tramite_2025 > 202503211717-dbsgdcore.sql
 
 #> mysql -h [host] -u [user] -p < [nameFile].sql -> Restaurar base de datos

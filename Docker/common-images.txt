@@ -1,5 +1,5 @@
 docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 --restart unless-stopped -d postgres:16
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=mysecretpassword -p 3306:3306 --restart unless-stopped -d mysql:9
 docker run --name mssql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=mySecretPassword' -p 1433:1433 --restart unless-stopped -d mcr.microsoft.com/mssql/server:2022-latest
-docker run --name redis -p 6379:6379 --restart unless-stopped -d redis
+docker run -d --name redis --restart unless-stopped -p 6379:6379 redis/redis-stack-server:latest
 docker run --name nginx -p 8080:80 -v ~/nginx/html:/usr/share/nginx/html:ro --restart unless-stopped -d nginx

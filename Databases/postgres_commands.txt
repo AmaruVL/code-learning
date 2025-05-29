@@ -20,6 +20,7 @@ dbname=# drop schema if exists public;
 
 > pg_dump -U <user> -Fc <database> > <filename>.backup -> Crear un backup
 > pg_restore -U <user> -d <database> <filename> -> Restaurar backup
+> pg_restore -U <user> -d <database> --no-owner <filename> -> Restaurar sin propietario anterior del backup
 
 CONFIGURAR BD DESDE INICIO
 // 1. Acceder como usuario postgres en el servidor
@@ -39,6 +40,5 @@ listen_addresses = '*' -> Modificar la linea listen_addresses para escuchar toda
 
 > sudo vim /var/lib/pgsql/17/data/pg_hba.conf // NOTA: 17 es la version, cambiar si es el caso
 host    all             all             0.0.0.0/0               md5      // PAra  permitir conexion desde cualquier red. Cambiar 0.0.0.0/0 para mas seguridad
-
 // 5. Reiniciar servicio
 > sudo systemctl restart postgresql-17

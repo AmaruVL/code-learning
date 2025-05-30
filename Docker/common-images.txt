@@ -3,3 +3,10 @@ docker run --name mysql -e MYSQL_ROOT_PASSWORD=mysecretpassword -p 3306:3306 --r
 docker run --name mssql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=mySecretPassword' -p 1433:1433 --restart unless-stopped -d mcr.microsoft.com/mssql/server:2022-latest
 docker run -d --name redis --restart unless-stopped -p 6379:6379 redis/redis-stack-server:latest
 docker run --name nginx -p 8080:80 -v ~/nginx/html:/usr/share/nginx/html:ro --restart unless-stopped -d nginx
+
+docker run -d \
+  --name redis \
+  --restart unless-stopped \
+  -p 6379:6379 \
+  -v redis-data:/data \
+  redis:7-alpine

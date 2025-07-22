@@ -17,3 +17,16 @@ mysql [database]> drop database <tableName>; -> Borrar base de datos
   |> mysqldump --ssl-mode=DISABLED -h 10.0.9.81 -u sgd -p db_tramite_2025 > 202503211717-dbsgdcore.sql
 
 #> mysql -h [host] -u [user] -p < [nameFile].sql -> Restaurar base de datos
+
+
+CREAR USUARIO UNA VEZ INSTALADO MYSQL
+sudo mysql -u root   -> Ingresar con usuario root
+
+-- 1. Crear el usuario
+CREATE USER 'sgd'@'%' IDENTIFIED BY '@sgd2024';
+
+-- 2. Otorgar todos los privilegios en todas las bases de datos
+GRANT ALL PRIVILEGES ON *.* TO 'sgd'@'%' WITH GRANT OPTION;
+
+-- 3. Aplicar los cambios
+FLUSH PRIVILEGES;
